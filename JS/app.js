@@ -18,7 +18,7 @@ let seattle = {
       let hourlyTotal = Math.ceil(randomCustomer * this.avgCookie); 
       this.cookiesSoldPerHour.push(hourlyTotal);
       this.dailyTotal+=hourlyTotal;
-    } 
+    }
   },
 
   render: function(){
@@ -33,7 +33,14 @@ let seattle = {
       liElem.textContent = `At ${hours[i]} sold ${this.cookiesSoldPerHour[i]} cookies.`;
       ulElem.appendChild(liElem);
     } containerEl.appendChild(ulElem);
+    this.total = document.createElement('p');
+    this.total.textContent = `Total number of cookies sold in this location daily: ${this.dailyTotal}`
+    ulElem.appendChild(this.total);
   },
+  // dailyTotal = document.createElement('p');
+  // dailyTotal.textContent = `Total number of cookies sold in this location daily: ${this.dailyTotal}`
+  // liElem.appendChild(dailyTotal),
+
 };
 seattle.render();
 // seattle.calculateCookie();
@@ -41,5 +48,39 @@ seattle.render();
 // console.log(seattle.dailyTotal);
 
 
+const containerEl_1 = document.getElementById('tokyo');
+let tokyo = {
+  minNumberCustomer: 3,
+  maxNumberCustomer: 24,
+  avgCookie: 1.2,
+  cookiesSoldPerHour:[],
+  dailyTotal:0,
+  randomNumCustomer: function () {
+    return Math.floor(Math.random()*(this.maxNumberCustomer-this.minNumberCustomer+1)+this.minNumberCustomer)
+  },
+  calculateCookie: function () {
+    for (let i=0; i<hours.length; i++){
+      let randomCustomer = this.randomNumCustomer();
+      let hourlyTotal = Math.ceil(randomCustomer * this.avgCookie);
+      this.cookiesSoldPerHour.push(hourlyTotal);
+      this.dailyTotal += hourlyTotal;
+    }
+  },
+  render: function (){
+    this.calculateCookie();
+    const h3Elem = document.createElement('h3');
+    h3Elem.textContent = 'Tokyo location';
+    containerEl_1.appendChild(h3Elem);
 
-
+    let ulElem = document.createElement('ul');
+    for (let i=0; i<hours.length; i++){
+      let liElem = document.createElement('li');
+      liElem.textContent = `At ${hours[i]} sold ${this.cookiesSoldPerHour[i]} cookies.`;
+      ulElem.appendChild(liElem);
+    } containerEl_1.appendChild(ulElem);
+    let total = document.createElement('p');
+    total.textContent = `Total number of cookies sold in this location daily: ${this.dailyTotal}`;
+    ulElem.appendChild(total);
+  }
+}
+ tokyo.render();
