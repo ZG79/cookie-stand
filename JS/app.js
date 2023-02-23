@@ -84,3 +84,42 @@ let tokyo = {
   }
 }
  tokyo.render();
+
+ let containerEl_2 = document.getElementById('dubai');
+
+ let dubai = {
+  minNumberCustomer: 11,
+  maxNumberCustomer: 38,
+  avgCookie: 3.7,
+  cookiesSoldPerHour: [],
+  dailyTotal: 0,
+  randomNum: function (){
+    return Math.floor(Math.random()*(this.maxNumberCustomer-this.minNumberCustomer+1)+this.minNumberCustomer);
+  },
+  calculateCookie: function(){
+    for (let i=0; i<hours.length;i++){
+      let randomNumCustomer = this.randomNum();
+      let hourlyTotal = Math.ceil(randomNumCustomer * this.avgCookie);
+      this.cookiesSoldPerHour.push(hourlyTotal);
+      this.dailyTotal+=hourlyTotal;
+    }
+  },
+  render: function(){
+    this.calculateCookie();
+    const h3Elem = document.createElement('h3');
+    h3Elem.textContent = 'Dubai location';
+    containerEl_2.appendChild(h3Elem);
+
+    let ulElem = document.createElement('ul');
+    for (let i=0; i<hours.length; i++){
+      let liElem = document.createElement('li');
+      liElem.textContent = `At ${hours[i]} sold ${this.cookiesSoldPerHour[i]} cookies.`;
+      ulElem.appendChild(liElem);
+    } containerEl_2.appendChild(ulElem);
+    let total = document.createElement('p');
+    total.textContent = `Total number of cookies sold in this location daily: ${this.dailyTotal}`;
+    ulElem.appendChild(total);
+  }
+ }
+
+ dubai.render();
