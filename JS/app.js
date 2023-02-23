@@ -1,9 +1,7 @@
-'Use strict';
+'use strict';
 
-const containerEl = document.getElementById('cookie');
+const containerEl = document.getElementById('seattle');
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
-
 
 let seattle = {
   minNumberCustomer: 23,
@@ -24,7 +22,6 @@ let seattle = {
   },
 
   render: function(){
-    //for loop to create ul-li
     this.calculateCookie();
     const h3Elem = document.createElement('h3');
     h3Elem.textContent = 'Seattle location';
@@ -32,9 +29,9 @@ let seattle = {
 
     let ulElem = document.createElement('ul');
     for (let i=0; i<hours.length; i++){
-    let liElem = document.createElement('li');
-    liElem.textContent = `${hours[i]} ${this.cookiesSoldPerHour[i]}`;
-    ulElem.appendChild(liElem);
+      let liElem = document.createElement('li');
+      liElem.textContent = `At ${hours[i]} sold ${this.cookiesSoldPerHour[i]} cookies.`;
+      ulElem.appendChild(liElem);
     } containerEl.appendChild(ulElem);
   },
 };
