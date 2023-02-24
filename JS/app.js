@@ -75,9 +75,9 @@ let tokyo = {
   }
 };
 
- let containerEl_2 = document.getElementById('dubai');
+let containerEl_2 = document.getElementById('dubai');
 
- let dubai = {
+let dubai = {
   minNumberCustomer: 11,
   maxNumberCustomer: 38,
   avgCookie: 3.7,
@@ -110,11 +110,11 @@ let tokyo = {
     total.textContent = `Total number of cookies sold in this location daily: ${this.dailyTotal}`;
     ulElem.appendChild(total);
   }
- };
+};
 
- const containerEl_3 = document.getElementById('paris');
+const containerEl_3 = document.getElementById('paris');
 
- let paris = {
+let paris = {
   minNumberCustomer:20,
   maxNumberCustomer:38,
   avgCookie:2.3,
