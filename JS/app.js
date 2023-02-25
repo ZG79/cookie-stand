@@ -26,6 +26,10 @@ function randomNumCustomer(max, min) {
 let allLocation = [];
 
 let seattle = new CookieSales('Seattle', 23, 65, 6.3);
+let tokyo = new CookieSales('Tokyo',3,24,1.2);
+let dubai = new CookieSales('Dubai', 11, 38, 3.7);
+let paris = new CookieSales('Paris', 20, 38, 2.3)
+let lima = new CookieSales ('Lima',2,16,4.6)
 
 function CookieSales(city, minNumberCustomer, maxNumberCustomer, avgCookie) {
   this.city = city;
@@ -66,9 +70,12 @@ CookieSales.prototype.render = function () {
   ulElem.appendChild(this.total);
 };
 
-console.log(seattle);
-
 seattle.render();
+tokyo.render();
+dubai.render();
+paris.render();
+lima.render();
+
 
 // const containerEl_1 = document.getElementById('tokyo');
 // let tokyo = {
