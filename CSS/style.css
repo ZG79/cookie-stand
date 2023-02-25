@@ -1,0 +1,73 @@
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 2%;
+  font-weight: 200;
+  border: 2px solid blue; 
+};
+
+#salmon {
+  display:inline-block;
+  justify-content: center; 
+  border: 2px solid red;
+  width: 100%;
+}
+img {
+  /* display: flex;
+  justify-content: center; 
+  align-items: center; */
+  width: 300px;
+  align-self: center;
+  margin-left: 40%;
+  /* margin-left:40px; */
+  /* text-align: center; */
+  border: 2px solid red;
+  margin-top: 2%;
+}
+
+#sales {
+  margin-left: 80%;
+  border: 2px solid green;
+}
+
+
+#seattle {
+  font-size: large;
+  padding-left:2%;
+  padding-top: 1%;
+  line-height: 20px;
+}
+
+#tokyo {
+  font-size: large;
+  padding-left:6%;
+  padding-top: 1%;
+  line-height: 20px;
+}
+
+#dubai {
+  font-size: large;
+  padding-left:10%;
+  padding-top: 1%;
+  line-height: 20px;
+}
+
+#paris {
+  font-size: large;
+  padding-left:14%;
+  padding-top: 1%;
+  line-height: 20px;
+}
+
+#lima {
+  font-size: large;
+  padding-left:18%;
+  padding-top: 1%;
+  line-height: 20px;
+}
+
+#homepage {
+  padding: 2%;
+  font-size: larger;
+  font-weight: 300;
+}
