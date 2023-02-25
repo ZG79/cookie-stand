@@ -62,31 +62,40 @@ for (let i=0; i<hours.length; i++){
   let th = document.createElement('th');
   th.textContent = `${hours[i]} `;
   tableEl.appendChild(th);
+  th.id = 'storeHours'
 }
 
 let totalDaily = document.createElement('th');
 totalDaily.textContent = 'Daily Location Total';
 tableEl.appendChild(totalDaily);
+totalDaily.id = 'lastEl';
+
+const totals = document.createElement('td');
+totals.textContent = 'Totals';
+containerEl.appendChild(totals);
 
 CookieSales.prototype.render = function () {
   this.calculateCookie();
+
   const row1 = document.createElement('tr');
   tableEl.appendChild(row1);
   const tableBody = document.createElement('td');
   tableBody.textContent = this.city;
   row1.appendChild(tableBody);
+  tableBody.id = 'cities';
 
-  // let tabRow = document.createElement('tr');
   for (let i = 0; i < hours.length; i++) {
     let td2 = document.createElement('td');
     td2.textContent = `${this.cookiesSoldPerHour[i]}`;
     row1.appendChild(td2);
-    // td.appendChild(td2);
-  } 
+    td2.id = 'sales';
+
+  }
   let storeTotal = document.createElement('td');
-  storeTotal.textContent = `${this.dailyTotal}`
+  storeTotal.textContent = `${this.dailyTotal}`;
   row1.appendChild(storeTotal);
-  
+  storeTotal.id = 'lastNums';
+
 };
 
 seattle.render();

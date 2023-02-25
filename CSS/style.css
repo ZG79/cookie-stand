@@ -31,43 +31,40 @@ img {
 }
 
 
-#seattle {
+#location {
   font-size: large;
   padding-left:2%;
   padding-top: 1%;
   line-height: 20px;
 }
 
-#tokyo {
-  font-size: large;
-  padding-left:6%;
-  padding-top: 1%;
-  line-height: 20px;
-}
 
-#dubai {
-  font-size: large;
-  padding-left:10%;
-  padding-top: 1%;
-  line-height: 20px;
-}
-
-#paris {
-  font-size: large;
-  padding-left:14%;
-  padding-top: 1%;
-  line-height: 20px;
-}
-
-#lima {
-  font-size: large;
-  padding-left:18%;
-  padding-top: 1%;
-  line-height: 20px;
-}
 
 #homepage {
   padding: 2%;
   font-size: larger;
   font-weight: 300;
+}
+
+#lastEl {
+	padding: 1%;
+}
+
+#lastNums {
+	border: 1px solid black;
+	padding: 1%;
+}
+
+#sales {
+	border: 1px solid black;
+	padding: 1%;
+}
+
+#storeHours {
+	/* letter-spacing: 10%; */
+}
+
+#cities {
+	border: 1px solid black;
+	padding: 1%
 }
