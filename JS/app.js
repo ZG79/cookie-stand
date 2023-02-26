@@ -92,12 +92,6 @@ CookieSales.prototype.render = function () {
   storeTotal.id = 'lastNums';
 };
 
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
-
 function total() {
   let row = document.createElement('tr');
   tableEl.appendChild(row);
@@ -117,9 +111,13 @@ function total() {
   }
   // console.log(hourlySum);
 
- 
 }
 
+seattle.render();
+tokyo.render();
+dubai.render();
+paris.render();
+lima.render();
 total();
 
 // const containerEl_1 = document.getElementById('tokyo');
