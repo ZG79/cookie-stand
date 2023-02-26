@@ -26,10 +26,10 @@ function randomNumCustomer(max, min) {
 let allLocation = [];
 
 let seattle = new CookieSales('Seattle', 23, 65, 6.3);
-let tokyo = new CookieSales('Tokyo',3,24,1.2);
+let tokyo = new CookieSales('Tokyo', 3, 24, 1.2);
 let dubai = new CookieSales('Dubai', 11, 38, 3.7);
 let paris = new CookieSales('Paris', 20, 38, 2.3);
-let lima = new CookieSales ('Lima',2,16,4.6);
+let lima = new CookieSales('Lima', 2, 16, 4.6);
 
 function CookieSales(city, minNumberCustomer, maxNumberCustomer, avgCookie) {
   this.city = city;
@@ -58,21 +58,17 @@ containerEl.appendChild(tableEl);
 
 let firstTh = document.createElement('th');
 tableEl.appendChild(firstTh);
-for (let i=0; i<hours.length; i++){
+for (let i = 0; i < hours.length; i++) {
   let th = document.createElement('th');
   th.textContent = `${hours[i]} `;
   tableEl.appendChild(th);
-  th.id = 'storeHours'
+  th.id = 'storeHours';
 }
 
 let totalDaily = document.createElement('th');
 totalDaily.textContent = 'Daily Location Total';
 tableEl.appendChild(totalDaily);
 totalDaily.id = 'lastEl';
-
-const totals = document.createElement('td');
-totals.textContent = 'Totals';
-containerEl.appendChild(totals);
 
 CookieSales.prototype.render = function () {
   this.calculateCookie();
@@ -89,13 +85,11 @@ CookieSales.prototype.render = function () {
     td2.textContent = `${this.cookiesSoldPerHour[i]}`;
     row1.appendChild(td2);
     td2.id = 'sales';
-
   }
   let storeTotal = document.createElement('td');
   storeTotal.textContent = `${this.dailyTotal}`;
   row1.appendChild(storeTotal);
   storeTotal.id = 'lastNums';
-
 };
 
 seattle.render();
@@ -104,6 +98,29 @@ dubai.render();
 paris.render();
 lima.render();
 
+function total() {
+  let row = document.createElement('tr');
+  tableEl.appendChild(row);
+  const totals = document.createElement('td');
+  totals.textContent = 'Totals';
+  row.appendChild(totals);
+  for (let i = 0; i < hours.length; i++) {
+    let hourlySum = 0;
+    for (let j = 0; j < allLocation.length; j++) {
+      //console.log(`Hour ${i} location ${j}`);
+      console.log('Location', allLocation[j].cookiesSoldPerHour[i]);
+      hourlySum += allLocation[j].cookiesSoldPerHour[i];
+    }
+    let tdElem = document.createElement('td');
+    tdElem.textContent = hourlySum;
+    row.appendChild(tdElem);
+  }
+  // console.log(hourlySum);
+
+ 
+}
+
+total();
 
 // const containerEl_1 = document.getElementById('tokyo');
 // let tokyo = {
