@@ -58,7 +58,7 @@ CookieSales.prototype.calculateCookie = function () {
 const tableEl = document.createElement('table');
 containerEl.appendChild(tableEl);
 
-//Adding hours
+//Adding hours to the th
 let firstTh = document.createElement('th');
 tableEl.appendChild(firstTh);
 for (let i = 0; i < hours.length; i++) {
@@ -85,11 +85,13 @@ CookieSales.prototype.render = function () {
   row1.appendChild(tableBody);
   tableBody.id = 'cities';
 
+
   for (let i = 0; i < hours.length; i++) {
     let td2 = document.createElement('td');
     td2.textContent = `${this.cookiesSoldPerHour[i]}`;
     row1.appendChild(td2);
     td2.id = 'sales';
+
   }
   let storeTotal = document.createElement('td');
   storeTotal.textContent = `${this.dailyTotal}`;
@@ -99,21 +101,33 @@ CookieSales.prototype.render = function () {
 
 //total from all location
 function total() {
-  let row = document.createElement('tr');
-  tableEl.appendChild(row);
-  const totals = document.createElement('td');
-  totals.textContent = 'Totals';
-  row.appendChild(totals);
-
+  let tfootElem = document.createElement('tfoot');
+  tableEl.appendChild(tfootElem);
+  const trFooterElem = document.createElement('tr');
+  trFooterElem.textContent = 'Totals';
+  tfootElem.appendChild(trFooterElem);
+  let totalsRow = [];
   for (let i = 0; i < hours.length; i++) {
     let hourlySum = 0;
     for (let j = 0; j < allLocation.length; j++) {
       hourlySum += allLocation[j].cookiesSoldPerHour[i];
     }
-    let tdElem = document.createElement('td');
-    tdElem.textContent = hourlySum;
-    row.appendChild(tdElem);
+    totalsRow.push(hourlySum);
+
   }
+  for (let i=0; i<totalsRow.length; i++){
+    let tdElem = document.createElement('td');
+    tdElem.textContent = totalsRow[i];
+    trFooterElem.appendChild(tdElem);
+  }
+  let grandTotal = 0;
+  for (let i =0; i<totalsRow.length; i++){
+    grandTotal += totalsRow[i];
+  }
+  let lastCell = document.createElement('td');
+  trFooterElem.appendChild(lastCell);
+  lastCell.textContent = grandTotal;
+
 }
 
 seattle.render();
