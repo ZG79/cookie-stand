@@ -42,6 +42,29 @@ function CookieSales(city, minNumberCustomer, maxNumberCustomer, avgCookie) {
 
   allLocation.push(this);
 }
+//header
+function renderHeader (){
+  let firstTh = document.createElement('thead');
+  tableEl.appendChild(firstTh);
+  let tr = document.createElement('tr');
+  firstTh.appendChild(tr);
+  //empty cell
+  let thEmptyCell = document.createElement('th');
+  tr.appendChild(thEmptyCell);
+
+  for (let i = 0; i < hours.length; i++) {
+    let thHeader = document.createElement('th');
+    thHeader.textContent = `${hours[i]} `;
+    tr.appendChild(thHeader);
+    thHeader.id = 'storeHours';
+  }
+  let totalDaily = document.createElement('th');
+  totalDaily.textContent = 'Daily Location Total';
+  tr.appendChild(totalDaily);
+  totalDaily.id = 'lastEl';
+}
+
+
 //prototype fx
 CookieSales.prototype.calculateCookie = function () {
   for (let i = 0; i < hours.length; i++) {
@@ -57,22 +80,12 @@ CookieSales.prototype.calculateCookie = function () {
 
 const tableEl = document.createElement('table');
 containerEl.appendChild(tableEl);
-
+tableEl.id = 'table';
 //Adding hours to the th
-let firstTh = document.createElement('th');
-tableEl.appendChild(firstTh);
-for (let i = 0; i < hours.length; i++) {
-  let th = document.createElement('th');
-  th.textContent = `${hours[i]} `;
-  tableEl.appendChild(th);
-  th.id = 'storeHours';
-}
+
 
 //adding daily total
-let totalDaily = document.createElement('th');
-totalDaily.textContent = 'Daily Location Total';
-tableEl.appendChild(totalDaily);
-totalDaily.id = 'lastEl';
+
 
 //render Function
 CookieSales.prototype.render = function () {
@@ -80,6 +93,7 @@ CookieSales.prototype.render = function () {
 
   const row1 = document.createElement('tr');
   tableEl.appendChild(row1);
+
   const tableBody = document.createElement('td');
   tableBody.textContent = this.city;
   row1.appendChild(tableBody);
@@ -106,6 +120,7 @@ function total() {
   const trFooterElem = document.createElement('tr');
   trFooterElem.textContent = 'Totals';
   tfootElem.appendChild(trFooterElem);
+  trFooterElem.id = 'footer';
   let totalsRow = [];
   for (let i = 0; i < hours.length; i++) {
     let hourlySum = 0;
@@ -130,6 +145,7 @@ function total() {
 
 }
 
+renderHeader();
 seattle.render();
 tokyo.render();
 dubai.render();
