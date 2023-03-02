@@ -3,19 +3,32 @@ h1 {
   font-size: 40px;
   margin-top: 2%;
   font-weight: 200;
+  color: brown
   /* border: 2px solid blue;  */
 };
 
 #sales {
-  display: flex;
-  justify-content: center;
+  margin-left: 50%;
 }
 
-#salmon {
-  display:inline-block;
-  justify-content: center; 
-  width: 100%;
+.salmon img:nth-of-type(1) {
+  display:inline-flex;
+  margin-left: 33%;
+  margin-bottom: 14px;
+  /* justify-content:first baseline;  */
 }
+
+.salmon img:nth-of-type(2) {
+  display:inline-flex;
+  margin-left: 0%;
+  
+}
+.hour {
+  font-size: 30px;
+}
+
+
+
 img {
   /* display: flex;
   justify-content: center; 
@@ -29,6 +42,58 @@ img {
   margin-top: 2%;
 }
 
+.mainText {
+  height: fit-content;
+  display: flex;
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  margin-left: 5%;
+  margin-top: 2%;
+  /* justify-content: center;
+  align-items: center;
+  align-self: center; */
+}
+
+.mainText p:nth-of-type(1){
+  width: 500px;
+  /* border: 1px solid black; */
+}
+
+.mainText p:nth-of-type(2){
+  width: 400px;
+  border: 1px solid brown;
+  margin-left: 2%;
+  text-align: center;
+}
+
+.mainText p:nth-of-type(3){
+  width: 400px;
+  /* border: 1px solid brown; */
+  margin-left: 2%;
+  font-style: normal;
+}
+
+#littleSalmon {
+  border-radius: 50%; width: 50px;
+  display: inline-flex;
+  margin:2px
+
+}
+
+#shirt {
+  margin-left: 0;
+  display: inline-block;
+  width: auto;
+}
+
+#fourFish {
+  margin-top: 40px;
+}
+
+
+
+/*JS elements */
 #location {
   background-color: antiquewhite;
   display: inline-block;
@@ -65,11 +130,11 @@ tr {
 
 td {
   border: 1px solid black;
+  padding: 5px;
 }
 
 th {
- padding-inline-start: 2%;
- padding-inline-end: 2%;
+ padding: 5px;
 }
 /* #homepage {
   padding: 2%;
