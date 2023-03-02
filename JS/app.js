@@ -57,7 +57,7 @@ CookieSales.prototype.calculateCookie = function () {
 
 const tableEl = document.createElement('table');
 containerEl.appendChild(tableEl);
-
+tableEl.id = 'table';
 //Adding hours to the th
 let firstTh = document.createElement('th');
 tableEl.appendChild(firstTh);
@@ -106,6 +106,7 @@ function total() {
   const trFooterElem = document.createElement('tr');
   trFooterElem.textContent = 'Totals';
   tfootElem.appendChild(trFooterElem);
+  trFooterElem.id = 'footer';
   let totalsRow = [];
   for (let i = 0; i < hours.length; i++) {
     let hourlySum = 0;

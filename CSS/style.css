@@ -25,13 +25,25 @@ img {
   margin-top: 2%;
 }
 
+#location {
+  background-color: antiquewhite;
+  display: inline-block;
+  margin: 2% 2%;
+  border: 1px solid black;
+}
+
+#table {
+  margin: 2%;
+}
+
+/* 
 #sales {
   margin-left: 80%;
   border: 2px solid green;
-}
+} */
 
 
-#location {
+/* #location {
   font-size: large;
   padding-left:2%;
   padding-top: 1%;
@@ -68,3 +80,8 @@ img {
 	border: 1px solid black;
 	padding: 1%
 }
+
+#footer {
+  border: 1px solid black;
+ 
+} */
