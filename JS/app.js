@@ -81,10 +81,6 @@ CookieSales.prototype.calculateCookie = function () {
 const tableEl = document.createElement('table');
 containerEl.appendChild(tableEl);
 tableEl.id = 'table';
-//Adding hours to the th
-
-
-//adding daily total
 
 
 //render Function
@@ -145,10 +141,36 @@ function total() {
 
 }
 
+//Form & Event
+
+//window to the DOM
+let info = document.getElementById('form');
+
+//callback fx
+function handleSubmit(event){
+  event.preventDefault();
+  let cityName = event.target.cityName.value;
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+  let avgCookie = event.target.avgCookie.value;
+
+  let addedCity = new CookieSales (cityName, minCust,maxCust, avgCookie);
+  addedCity.render();
+
+  document.querySelector('tfoot').remove();
+  //update total
+  total ();
+}
+
+
+
+//Attach event listener
+info.addEventListener('submit',handleSubmit);
+
 renderHeader();
 seattle.render();
 tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
-total();
+total ();
