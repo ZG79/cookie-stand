@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salmon Cookies Sales</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./CSS/reset.css">
-  <link rel="stylesheet" href="./CSS/style.css">
-</head>
-<body>
-  <main>
-    <section id="location">
-    <!-- </section>
-    <section id="tokyo">
-    </section>
-    <section id="dubai">
-    </section>
-    <section id="paris"> 
-    </section>
-    <section id="lima"> -->
-    </section>
-    <ul id="address">
-      <span style="font-size: large; font-style: oblique;"> Addresses: </span>
-      <li>Seattle: 12345 Salmon Rd, Seattle City, 56789</li> 
-      <li>Tokyo: 976 高橋 Hill, 兵庫県 890-2245</li> 
-      <li>Dubai: 9715 عزمي Road, مدنين, 42157</li>
-      <li>Paris: 7761 Astérie Royale, Bretagne, 87065</li>
-      <li>Lima: 19554 Heredia Raqmal, Navarra, 44159</li>
-    </ul>
-    <div id="homepage">
-    <a href="./index.html">Back to the homepage</a>
-    </div>
-    <form id="form" action="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salmon Cookies Sales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="location">
+        <h1>Locations around the world</h1>
+      </section>
+      <p style="font-style: italic; font-size: large; margin-left: 5%">
+        Addresses:
+      </p>
+      <ul id="address">
+        <li>Seattle: 12345 Salmon Rd, Seattle City, 56789</li>
+        <li>Tokyo: 976 高橋 Hill, 兵庫県 890-2245</li>
+        <li>Dubai: 9715 عزمي Road, مدنين, 42157</li>
+        <li>Paris: 7761 Asterie Royale, Bretagne, 87065</li>
+        <li>Lima: 19554 Heredia Raqmal, Navarra, 44159</li>
+      </ul>
+
+      <form id="form">
         <fieldset>
-          <legend>New location</legend>
+          <legend class="legend">New location</legend>
           <label for="city-name">Name of the City</label>
-          <input type="text" id="city-name" name="cityName">
+          <input type="text" id="city-name" name="cityName" />
 
           <label for="min-customer">Minimum Customer/hr</label>
-          <input type="number" id="min-customer" name="minCust">
+          <input type="number" id="min-customer" name="minCust" />
 
-          <label for="max-customer" >Maximum Customer/hr</label>
-          <input type="number" id="max-customer" name="maxCust">
+          <label for="max-customer">Maximum Customer/hr</label>
+          <input type="number" id="max-customer" name="maxCust" />
 
-          <label for="avg-cookie">Average Cookie Sales/hr</label>
-          <input type="number" name="avg-cookie" id="avgCookie">
+          <label for="avgCookie">Average Cookie Sales/hr</label>
+          <input type="number" id="avgCookie" name="average-cookie" />
 
           <button type="submit">Submit</button>
         </fieldset>
-    </form>
-  </main>
-</body>
-<script src="./JS/app.js"></script>
+      </form>
+      <div id="homepage">
+        <a href="./index.html">Back to the homepage</a>
+      </div>
+    </main>
+    <script src="./JS/app.js"></script>
+  </body>
 </html>

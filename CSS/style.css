@@ -132,9 +132,22 @@ th {
 
 /*Form and Event */
 
-#form {
+form {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-style: oblique;
+}
+label, input, textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+.legend {
+  margin: 2%;
+  font-size: large;
+  background-color: antiquewhite;
 }
 
 /* #homepage {
