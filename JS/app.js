@@ -81,10 +81,6 @@ CookieSales.prototype.calculateCookie = function () {
 const tableEl = document.createElement('table');
 containerEl.appendChild(tableEl);
 tableEl.id = 'table';
-//Adding hours to the th
-
-
-//adding daily total
 
 
 //render Function
@@ -160,6 +156,10 @@ function handleSubmit(event){
 
   let addedCity = new CookieSales (cityName, minCust,maxCust, avgCookie);
   addedCity.render();
+
+  document.querySelector('tfoot').remove();
+  //update total
+  total ();
 }
 
 
@@ -173,4 +173,4 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
-total();
+total ();

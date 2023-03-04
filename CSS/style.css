@@ -128,6 +128,15 @@ td {
 th {
  padding: 5px;
 }
+
+
+/*Form and Event */
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
 /* #homepage {
   padding: 2%;
   font-size: larger;
