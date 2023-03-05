@@ -20,7 +20,7 @@ const hours = [
 const containerEl = document.getElementById('location');
 //random number generator
 function randomNumCustomer(max, min) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.ceil(Math.random() * (max - min + 1) + min);
 }
 
 let allLocation = [];
