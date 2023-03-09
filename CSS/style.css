@@ -3,8 +3,8 @@ h1 {
   font-size: 40px;
   margin-top: 2%;
   font-weight: 200;
-  color: brown
-  /* border: 2px solid blue;  */
+  color: brown;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 };
 
 #sales {
@@ -15,13 +15,19 @@ h1 {
   display:inline-flex;
   margin-left: 33%;
   margin-bottom: 14px;
-  /* justify-content:first baseline;  */
+  padding-bottom: 15px;
 }
 
 .salmon img:nth-of-type(2) {
   display:inline-flex;
   margin-left: 0%;
-  
+  background-color: transparent;
+  padding-bottom: 15px;
+}
+
+.salmon {
+  background-color: white;
+  height: fit-content;
 }
 .hour {
   font-size: 30px;
@@ -33,15 +39,9 @@ h1 {
 }
 
 img {
-  /* display: flex;
-  justify-content: center; 
-  align-items: center; */
   width: 300px;
   align-self: center;
   margin-left: 40%;
-  /* margin-left:40px; */
-  /* text-align: center; */
-  /* border: 2px solid red; */
   margin-top: 2%;
 }
 
@@ -53,13 +53,12 @@ img {
   font-size: large;
   margin-left: 5%;
   margin-top: 2%;
-  /* justify-content: center;
-  align-items: center;
-  align-self: center; */
 }
 
 .mainText p:nth-of-type(1){
   width: 500px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #455b55;
   /* border: 1px solid black; */
 }
 
@@ -68,6 +67,8 @@ img {
   border: 1px solid brown;
   margin-left: 2%;
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #002f06;
 }
 
 .mainText p:nth-of-type(3){
@@ -92,6 +93,7 @@ img {
 
 #fourFish {
   margin-top: 40px;
+  background-color: transparent;
 }
 #homepage {
   /* text-align:justify; */
@@ -150,31 +152,6 @@ label, input, textarea {
   background-color: antiquewhite;
 }
 
-/* #homepage {
-  padding: 2%;
-  font-size: larger;
-  font-weight: 300;
+body{
+  background-color: #c2fdc5;
 }
-
-#lastEl {
-	padding: 1%;
-}
-
-#lastNums {
-	border: 1px solid black;
-	padding: 1%;
-}
-
-#sales {
-	border: 1px solid black;
-	padding: 1%;
-}
-
-#storeHours {
-	letter-spacing: 10%;
-}
-
-#cities {
-	border: 1px solid black;
-	padding: 1%
-} */
