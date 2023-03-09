@@ -31,7 +31,7 @@ let dubai = new CookieSales('Dubai', 11, 38, 3.7);
 let paris = new CookieSales('Paris', 20, 38, 2.3);
 let lima = new CookieSales('Lima', 2, 16, 4.6);
 
-//class function
+//constructor function
 function CookieSales(city, minNumberCustomer, maxNumberCustomer, avgCookie) {
   this.city = city;
   this.minNumberCustomer = minNumberCustomer;
